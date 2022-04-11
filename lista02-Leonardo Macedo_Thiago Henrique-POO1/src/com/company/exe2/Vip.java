@@ -12,4 +12,6 @@ public class Vip extends Ingresso {
         double valorVip = valor + (valor * (adicional / 100));
         setValor(valorVip);
     }
+
+
 }
