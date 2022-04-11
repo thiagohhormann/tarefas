@@ -8,8 +8,9 @@ public class Pobre extends Pessoa{
         this.salario = salario;
     }
 
-    public void trabalha() {
+    public String trabalha() {
         this.dinheiro += this.salario;
+        return "Trabalhando";
     }
 
     public double getSalario() {

@@ -4,14 +4,18 @@ public class CamaroteInferior extends Vip{
 
     private int fileira, poltrona;
 
-    CamaroteInferior(double valor, int adicional, int fileira, int poltrona) {
+    public CamaroteInferior(double valor, double adicional, int fileira, int poltrona) {
         super(valor, adicional);
         this.fileira = fileira;
         this.poltrona = poltrona;
+
+        adicional = (adicional / 100) * valor;
+        double valorVip = valor + adicional;
+        setValor(valorVip);
     }
 
-    public int getAssento() {
-        return this.fileira + this.poltrona;
+    public String getAssento() {
+        return String.format("assento %o fila %o ", this.fileira, this.poltrona);
     }
 
     public void mudarAssento(int novaFileira, int novaPoltrona) {

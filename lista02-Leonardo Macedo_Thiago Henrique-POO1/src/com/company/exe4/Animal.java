@@ -9,6 +9,6 @@ public class Animal {
     }
 
     public String caminha() {
-        return this.nome + "Caminha";
+        return this.nome + " Caminha";
     }
 }

@@ -8,7 +8,8 @@ public class Chefe extends Empregado{
         this.beneficio = beneficio;
     }
 
-    public void aumentoSalarial(int percentual) {
-        this.salario += ((percentual / 100) * this.salario) + this.beneficio;
+    public void aumentoSalarial(double percentual) {
+        percentual /= 100;
+        this.salario += (percentual * this.salario) + this.beneficio;
     }
 }

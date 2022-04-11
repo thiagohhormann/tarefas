@@ -1,13 +1,14 @@
 package com.company.exe2;
 
 public class CamaroteSuperior extends Vip{
-    private int adicionalSuperior;
+    private double adicionalSuperior;
 
-    public CamaroteSuperior (double valor, int adicional, int adicionalSuperior) {
+    public CamaroteSuperior (double valor, double adicional, double adicionalSuperior) {
         super(valor, adicional);
-        this.adicionalSuperior = adicionalSuperior;
+        this.adicionalSuperior = (adicionalSuperior / 100) * valor;
+        adicional = (adicional / 100) * valor;
 
-        double valorVipSuperior= valor + (valor * (adicional / 100));
+        double valorVipSuperior = valor + adicional + adicionalSuperior;
         setValor(valorVipSuperior);
     }
 }

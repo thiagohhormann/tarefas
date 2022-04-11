@@ -17,7 +17,8 @@ public class Empregado {
         return this.salario;
     }
 
-    public void aumentoSalarial(int percentual) {
-        this.salario += (percentual / 100) * this.salario;
+    public void aumentoSalarial(double percentual) {
+        percentual /= 100;
+        this.salario += (percentual * this.salario);
     }
 }
